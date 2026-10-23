@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de alumnos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="contenedor">
+    <h1>Registro de alumnos</h1>
+    <p class="descripcion">
+      Esta pagina guarda alumnos en PostgreSQL usando FastAPI.
+    </p>
+
+    <form id="formulario">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required>
+      </div>
+      <div class="campo">
+        <label for="carrera">Carrera</label>
+        <input type="text" id="carrera" required>
+      </div>
+      <div class="botones">
+        <button type="submit" class="boton">Guardar alumno</button>
+        <button type="button" id="btn-actualizar" class="boton boton-secundario">
+          Actualizar lista
+        </button>
+      </div>
+    </form>
+
+    <section class="lista">
+      <h2>Alumnos guardados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Carrera</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+      <p id="mensaje" class="mensaje"></p>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
